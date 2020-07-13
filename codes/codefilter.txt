@@ -1,0 +1,8 @@
+5 
+636 300 207 243 254
+int lptr = 0;int rptr = 0;int count = 0;int group_max = 10000;while(rptr < size) {cout << "lptr and rptr   " << lptr << " " << rptr << endl;if(LCP[rptr] == 0) {if(count >= T-1) {int iter = 0;while(queue_stack[iter].size() > 0) {if(queue_stack[iter][0] < group_max) {group_max = queue_stack[iter][0]; }iter++;}cout << "Here" << endl;cout << "group_max = " << group_max << endl;}group_max = 10000;lptr = rptr+1;rptr = lptr;count = 0;memset(group,-1,1000);}else if(LCP[rptr] > 0) {cout << "count " << count << endl;if(group[hash_owner[rptr]] == -1) {queue_stack[count].push_back(LCP[rptr]);group[hash_owner[rptr]] = count;count++;rptr++;}
+int lptr = 0;int rptr = 0;int count = 0;int group_max = 10000;while(rptr < size) {cout << "lptr and rptr   " << lptr << " " << rptr << endl;if(LCP[rptr] == 0) {if(count >= T-1) {int iter = 0;while(queue_stack[iter].size() > 0) {if(queue_stack[iter][0] < group_max) {group_max = queue_stack[iter][0];
+}iter++;}cout << "Here" << endl;cout << "group_max = " << group_max << endl;}group_max = 10000;lptr = rptr+1;rptr = lptr;count = 0;memset(group,-1,1000);}else if(LCP[rptr] > 0) {cout << "count " << count <<
+<< endl;if(LCP[rptr] == 0) {if(count >= T-1) {int iter = 0;while(queue_stack[iter].size() > 0) {if(queue_stack[iter][0] < group_max) {group_max = queue_stack[iter][0];}iter++;}cout << "Here" << endl;cout << "group_max = " << group_max << endl
+hile(queue_stack[iter].size() > 0) {if(queue_stack[iter][0] < group_max) {group_max = queue_stack[iter][0]; }iter++;}cout << "Here" << endl;cout << "group_max = " << group_max << endl;}group_max = 10000;lptr = rptr+1;rptr = lptr;count = 0;memset(group,-
+50
